@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="text-center">Flats</h1>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) do %>
+
+    <div class="card col-xs-12 col-sm-3 m-2 p3">
+      <div class="">
+        <img src="https://source.unsplash.com/random/270x300">
+        <div class="card-description p-3">
+          <h2><%= flat.name %></h2>
+          <p><%= flat.description %>location: <%= flat.address %></p>
+          <p> <%= flat.number_of_guests %> <% flat.price_per_night %></p>
+        </div>
+        <% end %>
+        <%= link_to "", flat_path(flat)%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
